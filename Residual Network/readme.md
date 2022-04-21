@@ -11,4 +11,8 @@ In recent years, neural networks have become much deeper, with state-of-the-art 
 
 * During training, you might therefore see the magnitude (or norm) of the gradient for the shallower layers decrease to zero very rapidly as training proceeds.
 
+In ResNets, a "shortcut" or a "skip connection" allows the model to skip layers:
+
 <img src="skip-connection.png" style="width:450px;height:220px;">
+
+Having ResNet blocks with the shortcut also makes it very easy for one of the blocks to learn an identity function. This means that you can stack on additional ResNet blocks with little risk of harming training set performance. There is also some evidence that the ease of learning an identity function accounts for ResNets' remarkable performance even more than skip connections help with vanishing gradients.
