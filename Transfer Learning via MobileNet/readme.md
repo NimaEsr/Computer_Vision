@@ -6,12 +6,18 @@ MobileNetV2 was trained on ImageNet and is optimized to run on mobile and other 
 *   Thin input and output bottlenecks between layers
 *   Shortcut connections between bottleneck layers
 
-<img src="MobilenetV2.avi" style="width:300px;height:220px;">
+<img src="MobilenetV2.png" style="width:300px;height:220px;">
 
-MobileNetV2 uses depthwise separable convolutions as efficient building blocks. Traditional convolutions are often very resource-intensive, and  depthwise separable convolutions are able to reduce the number of trainable parameters and operations and also speed up convolutions
+MobileNetV2 uses depthwise separable convolutions as efficient building blocks. Traditional convolutions are often very resource-intensive, and  depthwise separable convolutions are able to reduce the number of trainable parameters and operations and also speed up convolutions. We will use MobileNetV2 that was designed to provide fast and computationally efficient performance. It's been pre-trained on ImageNet, a dataset containing over 14 million images and 1000 classes.
 
-In this file, we aim to do transfer learning on a pre-trained CNN to build an Alpaca/Not Alpaca classifier!
+In this project, we aim to do transfer learning on a pre-trained CNN to build an Alpaca/Not Alpaca classifier!
 
-<img src="alpaca.avi" style="width:300px;height:220px;">
+<img src="alpaca.avif" style="width:300px;height:220px;">
 
-A pre-trained model is a network that's already been trained on a large dataset and saved, which allows to use it to customize your own model cheaply and efficiently. We will use MobileNetV2 that was designed to provide fast and computationally efficient performance. It's been pre-trained on ImageNet, a dataset containing over 14 million images and 1000 classes.
+We use a pretrained model to modify the classifier task so that it's able to recognize alpacas in three steps:
+
+* Delete the top layer (the classification layer)
+
+* Add a new classifier layer
+
+* Freeze the base model and train the newly-created classifier layer
