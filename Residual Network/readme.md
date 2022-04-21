@@ -10,3 +10,5 @@ In recent years, neural networks have become much deeper, with state-of-the-art 
 * More specifically, during gradient descent, as you backpropagate from the final layer back to the first layer, you are multiplying by the weight matrix on each step, and thus the gradient can decrease exponentially quickly to zero (or, in rare cases, grow exponentially quickly and "explode," from gaining very large values). 
 
 * During training, you might therefore see the magnitude (or norm) of the gradient for the shallower layers decrease to zero very rapidly as training proceeds.
+
+<img src="skip-connection.png" style="width:450px;height:220px;">
