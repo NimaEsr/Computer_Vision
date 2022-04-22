@@ -1,4 +1,5 @@
 
+# Car Detection in Autonomous Driving
 In this project, we work on a self-driving car. As a critical component of this project, we would like to first build a car detection system. To collect data, we use a mounted camera to the hood (meaning the front) of the car, which takes pictures of the road ahead every few seconds as you drive around. 
 
 </center>
